@@ -9,7 +9,7 @@
 <body>
     <script>
     function a() {
-        document.body.innerText = Math.round((Date.now()-Date.parse('1999-05-02T20:33:00.000Z'))/1000).toLocaleString('en-IN');// + 'seconds old';
+        document.body.innerText = Math.round((Date.now()-Date.parse('1999-05-02T20:33:00.000Z'))/1000).toLocaleString('en-IN') + 'seconds old';
     }
     
     setInterval(a, 1000);
