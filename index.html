@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday</title>
+</head>
+<body>
+    <script>
+    function a() {
+        document.body.innerText = Math.round((Date.now()-Date.parse('1999-05-02T20:33:00.000Z'))/1000).toLocaleString('en-IN') + 'seconds old';
+    }
+    
+    setInterval(a, 1000);
+    </script>
+</body>
+</html>
