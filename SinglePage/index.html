@@ -27,6 +27,11 @@
 		white-space: normal;
 	}
 }
+.print {display: none;}
+@media print {
+	@page{size: auto;}
+	.print {display: block !important;}
+}
 </style>
 <!-- End shared CSS values -->
 
@@ -327,9 +332,9 @@
 <span id="t2i_1" class="t s4">2017 </span>
 <span id="t2j_1" class="t s4">2018 </span>
 <span id="t2k_1" class="t s8">I hereby declare that all the above information is true to the best of my knowledge </span>
-<span id="t2l_1" class="t s8">Date: </span>
-<span id="t2m_1" class="t s8">Place: </span>
-<span id="t2n_1" class="t s8">Signature </span>
+<span id="t2l_1" class="t s8 print">Date: </span>
+<span id="t2m_1" class="t s8 print">Place: </span>
+<span id="t2n_1" class="t s8 print">Signature </span>
 <span id="t2o_1" class="t s7">Declaration </span>
 <span id="t2p_1" class="t s5">Attended </span><span id="t2q_1" class="t s5">two </span><span id="t2r_1" class="t s5">days </span><span id="t2s_1" class="t s5">workshop </span><span id="t2t_1" class="t s5">on </span><span id="t2u_1" class="t s5">ArduBotics </span>
 <span id="t2v_1" class="t s5">Robotics </span>
@@ -388,5 +393,20 @@
 
 
 </div>
+<script>
+    var dob = new Date("05/03/1999");
+    //calculate month difference from current date in time
+    var month_diff = Date.now() - dob.getTime();
+    
+    //convert the calculated difference in date format
+    var age_dt = new Date(month_diff); 
+    
+    //extract year from date    
+    var year = age_dt.getUTCFullYear();
+    
+    //now calculate the age of the user
+    var age = Math.abs(year - 1970);
+    document.getElementById('t50_1').innerText = age;
+</script>
 </body>
 </html>
