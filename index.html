@@ -415,7 +415,21 @@
 <span id="t1u_2" class="t s5 print">Date: </span>
 <span id="t1v_2" class="t s5 print">Place: </span>
 <span id="t1w_2" class="t s5 print">Signature </span></div>
-
+<script>
+    var dob = new Date("05/03/1999");
+    //calculate month difference from current date in time
+    var month_diff = Date.now() - dob.getTime();
+    
+    //convert the calculated difference in date format
+    var age_dt = new Date(month_diff); 
+    
+    //extract year from date    
+    var year = age_dt.getUTCFullYear();
+    
+    //now calculate the age of the user
+    var age = Math.abs(year+1 - 1970);
+    document.getElementById('t1o_2').innerText = age;
+</script>
 
 <!-- End text definitions -->   
     
