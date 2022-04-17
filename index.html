@@ -5,9 +5,13 @@
 <meta charset="utf-8" />
 <title>Resume</title>
 <style>
+    .print {display: none;}
+    .no-print {display: block;}
     @media print {
         @page{size: auto;}
         body {zoom: 0.84 !important;}
+        .print {display: block !important;}
+        .no-print {display: none !important;}
     }
 </style>
 
@@ -161,7 +165,10 @@
 
 <!-- Begin page background -->
 <div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
-<div id="pg1" style="-webkit-user-select: none;"><object width="909" height="1286" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:909px; height:1286px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<div id="pg1" style="-webkit-user-select: none;">
+    <object width="909" height="1286" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:909px; height:1286px; -moz-transform:scale(1); z-index: 0;"></object>
+    <object width="909" height="120" data="1/1_1.svg" type="image/svg+xml" id="pdf1_1" class="no-print" style="width:909px; height:120px; -moz-transform:scale(1); z-index: 0;transform: translate(30px, -10px)"></object>
+</div>
 <!-- End page background -->
 
 
@@ -351,7 +358,7 @@
 
 <!-- Begin page background -->
 <div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
-<div id="pg2" style="-webkit-user-select: none;"><object width="909" height="1286" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:909px; height:1286px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<div id="pg2" style="-webkit-user-select: none;"><object width="909" height="1286" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:909px; height:1286px; -moz-transform:scale(1); z-index: 0;transform: translate(30px, 0px)"></object></div>
 <!-- End page background -->
 
 
@@ -394,9 +401,9 @@
 <span id="t1r_2" class="t s4">English, Telugu </span>
 <span id="t1s_2" class="t s1">Declaration </span>
 <span id="t1t_2" class="t s5">I hereby declare that all the above information is true to the best of my knowledge </span>
-<span id="t1u_2" class="t s5">Date: </span>
-<span id="t1v_2" class="t s5">Place: </span>
-<span id="t1w_2" class="t s5">Signature </span></div>
+<span id="t1u_2" class="t s5 print">Date: </span>
+<span id="t1v_2" class="t s5 print">Place: </span>
+<span id="t1w_2" class="t s5 print">Signature </span></div>
 <!-- End text definitions -->   
     
 </div>
